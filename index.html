@@ -1,0 +1,67 @@
+<? xml encoding="utf-8" ?>
+<html>
+  <head>
+    <title>3 2 1 ....GO!!</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script type="text/javascript" src="Particles.js"></script>
+    <script type="text/javascript" src="Objetos.js"></script>
+    <script type="text/javascript" src="Game.js"></script>
+  </head>
+  <body>
+    <!--Interfaz donde se visualisa a la nave espacial-->
+
+      <canvas id="IntfRocket">
+      </canvas>
+    
+    <!--Interfaz Lateral Derecha--> 
+    <div id="IntfInfo"> 
+      <center>
+      <br/>
+
+      
+      <br/>
+      <br/>
+      <img id="Mapa" src="sprites/back3.jpg" /> 
+      <br/>
+      <br/>
+      <img id="Trayectoria" src="sprites/img8.png"/>
+      
+      </center>
+    </div>
+    <!--Interfaz Inferior--> 
+    <div id="IntfControls">
+      <div>
+        <br/>
+        <input class="Btn" type="button" value=" " onclick="Btns.ChangeBtnStatus(this)"/><span class="Labels">Clima</span>
+        <br/>
+        <input class="Btn" type="button" value=" " onclick="Btns.ChangeBtnStatus(this)"/><span class="Labels">Trayectoria</span>
+        <br/>
+        <input class="Btn" type="button" value=" " onclick="Btns.ChangeBtnStatus(this)"/><span class="Labels">Electricidad</span>
+      </div>
+        
+      <div id="Semaforo">
+        <center>
+        <span id="Timer">00:00:00</span>
+        <br/>
+        <br/>
+        <div id="LEDR"></div>
+        <div id="LEDY"></div>
+        <div id="LEDV"></div>
+        <br/>
+        <span id="Medidor">
+        E<input type="range" id="Med" min="0" max="100" value="2"/>F
+        </span>
+      </center>
+      </div>
+        <input id="GO" type="button" value="GO!" onclick="Rocket.Go()"/>
+
+        <button id="AutoDestruction" onclick="Rocket.SelfDestruction()"><img src="sprites/img7.png" /></button>
+        
+        
+      
+    </div>
+    <!--Caja Vacia-->
+    <div id="CanBox">
+    </div>
+  </body>
+</html>
